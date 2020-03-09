@@ -22,6 +22,10 @@ if [ ! -d "$WKHTMLTOPDF_PATH" ]; then
 
 	tar -xvf "$EXTRACTED_DATA_TAR" -C "$CACHE_DIR"
 	rm "$DEB_FILENAME"
+	
+	echo 'Install libpng'
+	apt update
+	apt install libpng12-0
 fi
 
 # Move files to /app/bin
